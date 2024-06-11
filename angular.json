@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/dex-website",
+            "outputPath": "dist/Dex-Website",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -82,9 +82,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
-            "scripts": [
-              "./node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"
-            ],
+            "scripts": [],
             "stylePreprocessorOptions": {
               "includePaths": ["src/app/shared-styles"]
             }
