@@ -4,6 +4,8 @@ export const videoList: {
   src: string;
   title: string;
   views: number;
+  uploaderIcon: string;
+  uploaderName: string;
 }[] = [
   {
     thumbnail:
@@ -12,6 +14,9 @@ export const videoList: {
     title: 'Keyboard Cat Redux',
     views: 100,
     description: ' This is the first video.',
+    uploaderIcon:
+      'https://images.unsplash.com/photo-1530107973768-581951e62d34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    uploaderName: 'John Doe',
   },
   {
     thumbnail:
@@ -20,6 +25,9 @@ export const videoList: {
     title: 'python vs javascript',
     views: 100,
     description: 'This is the first video.',
+    uploaderIcon:
+      'https://images.unsplash.com/photo-1530107973768-581951e62d34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    uploaderName: 'Mike Johnson',
   },
   {
     thumbnail:
@@ -28,6 +36,9 @@ export const videoList: {
     title: 'Tesla Model S new features',
     views: 100,
     description: 'This is the first video.',
+    uploaderIcon:
+      'https://images.unsplash.com/photo-1530107973768-581951e62d34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    uploaderName: 'Kelly Smith',
   },
   {
     thumbnail:
@@ -36,6 +47,9 @@ export const videoList: {
     title: 'drone photography',
     views: 100,
     description: 'This is the first video.',
+    uploaderIcon:
+      'https://images.unsplash.com/photo-1530107973768-581951e62d34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    uploaderName: 'Lokki Davis',
   },
   {
     thumbnail:
@@ -44,6 +58,9 @@ export const videoList: {
     title: 'software development in 2024',
     views: 100,
     description: 'This is the first video.',
+    uploaderIcon:
+      'https://images.unsplash.com/photo-1530107973768-581951e62d34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    uploaderName: 'Ricky Martin',
   },
   {
     thumbnail:
@@ -52,6 +69,9 @@ export const videoList: {
     title: 'samsung galaxy AKG on review',
     views: 100,
     description: 'This is the first video.',
+    uploaderIcon:
+      'https://images.unsplash.com/photo-1530107973768-581951e62d34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    uploaderName: 'oliver Queen',
   },
   {
     thumbnail:
@@ -60,6 +80,9 @@ export const videoList: {
     title: 'Smart forcaste detection application',
     views: 100,
     description: 'This is the first video.',
+    uploaderIcon:
+      'https://images.unsplash.com/photo-1530107973768-581951e62d34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    uploaderName: 'william smith',
   },
   {
     thumbnail:
@@ -68,5 +91,8 @@ export const videoList: {
     title: 'Lexi AI assistant for developers',
     views: 100,
     description: 'This is the first video.',
+    uploaderIcon:
+      'https://images.unsplash.com/photo-1530107973768-581951e62d34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    uploaderName: 'james bond',
   },
 ];

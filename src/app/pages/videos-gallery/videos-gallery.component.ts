@@ -36,6 +36,8 @@ export class VideosGalleryComponent implements OnInit {
     src: string;
     title: string;
     views: number;
+    uploaderIcon: string;
+    uploaderName: string;
   }[] = [];
 
   ngOnInit() {

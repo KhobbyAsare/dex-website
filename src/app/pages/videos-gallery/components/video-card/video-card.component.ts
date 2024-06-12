@@ -19,6 +19,8 @@ export class VideoCardComponent {
     title: string;
     views: number;
     description: string;
+    uploaderIcon:string;
+    uploaderName: string;
   }>();
 
   stopPropagation(event: MouseEvent) {

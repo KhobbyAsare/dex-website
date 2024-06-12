@@ -1,0 +1,67 @@
+<app-profile-page-navigation-bar></app-profile-page-navigation-bar>
+
+<section>
+  <header>
+    <div class="container">
+      <div class="search-div">
+        <div class="search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <g
+              fill="none"
+              stroke="#00008b"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M3 7V5a2 2 0 0 1 2-2h2m10 0h2a2 2 0 0 1 2 2v2m0 10v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"
+              />
+              <circle cx="12" cy="12" r="3" />
+              <path d="m16 16l-1.9-1.9" />
+            </g>
+          </svg>
+          <input type="text" class="search-bar" placeholder="Search..." />
+        </div>
+      </div>
+      <div class="uploads-text">
+        <span>My Uploads</span>
+
+        <div class="breadcrum">
+          <button
+            (click)="currentView = 'videos'"
+            [style.textDecoration]="
+              currentView === 'videos' ? 'underline' : null
+            "
+          >
+            Videos
+          </button>
+          <button
+            (click)="currentView = 'gallery'"
+            [style.textDecoration]="
+              currentView === 'gallery' ? 'underline' : null
+            "
+          >
+            Gallery
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="cards-content">
+    @if(currentView === 'videos'){
+        <div class="container">
+      <app-video-card
+        *ngFor="let video of cardVideo"
+        [video]="video"
+      ></app-video-card>
+      </div>
+      }@else {
+        <app-my-gallery></app-my-gallery>
+      }
+  </div>
+</section>

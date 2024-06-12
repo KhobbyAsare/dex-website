@@ -5,6 +5,7 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { VideosGalleryComponent } from './pages/videos-gallery/videos-gallery.component';
 import { authGuardGuard } from './Guard/auth-guard.guard';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { CurrentUserUploadsComponent } from './pages/current-user-uploads/current-user-uploads.component';
 
 export const routes: Routes = [
   {
@@ -32,7 +33,10 @@ export const routes: Routes = [
     canActivate: [authGuardGuard],
   },
   {
-    path: 'profile',
-    component: UserProfileComponent,
-  },
+    path: 'user',
+    loadChildren: () =>
+      import('./modules/user/currentUser.module').then(
+        (m) => m.CurrentUser
+      ),
+  }
 ];

@@ -1,0 +1,106 @@
+@import "all-sass-imports.scss";
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section {
+  padding-top: 5rem;
+  header {
+    padding: 10px;
+    .search-div {
+      @include display-flex(row, center, center);
+      .search {
+        width: 500px;
+        padding: 0.4rem 1rem;
+        border-radius: 5px;
+        margin-right: 1rem;
+        background-color: #ffffff44;
+        border: 1px solid #ffffff44;
+        @include display-flex(row, center, center);
+        @include screen-breakpoints(phone) {
+          width: 100%;
+        }
+        @include screen-breakpoints(tablet-portrait) {
+          width: 80%;
+        }
+
+        input {
+          color: #1a1a1a;
+          width: 100%;
+          border: none;
+          outline: none;
+          padding: 0.5rem;
+          font-size: 1rem;
+          border-radius: 5px;
+          background-color: transparent;
+
+          &::placeholder {
+            color: #ffffffcd;
+          }
+        }
+      }
+    }
+
+    .uploads-text {
+      margin-top: 2rem;
+      @include display-flex(row, space-between, center);
+      span {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: $primary-color;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+      }
+
+      .breadcrum {
+        @include display-flex(row, center, center);
+        gap: 0.5rem;
+        button {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          @include display-flex(row, center, center);
+          padding: 0.5rem;
+          border-radius: 5px;
+          transition: all ease-in-out 600ms;
+          color: $primary-color;
+          font-size: 0.95rem;
+          &:hover {
+            background-color: #ffffff44;
+          }
+        }
+      }
+    }
+  }
+
+  .cards-content {
+    padding: 3rem 0;
+    .container {
+      width: 100%;
+
+      @include display-grid(3, 1rem);
+      padding: 20px;
+
+      @include screen-breakpoints(phone) {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 2rem;
+      }
+      @include screen-breakpoints(tablet-portrait) {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      @include screen-breakpoints(tablet-landscape) {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      @include screen-breakpoints(desktop) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include screen-breakpoints(large-desktop) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  }
+}
