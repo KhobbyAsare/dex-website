@@ -38,5 +38,12 @@ export const routes: Routes = [
       import('./modules/user/currentUser.module').then(
         (m) => m.CurrentUser
       ),
+  },
+  {
+    path: 'community',
+    loadChildren: () =>
+      import('./modules/communityPage/community-page.module').then(
+        (m) => m.CommunityPageModule
+      ),
   }
 ];

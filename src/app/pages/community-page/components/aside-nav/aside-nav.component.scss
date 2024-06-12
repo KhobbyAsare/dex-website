@@ -1,0 +1,41 @@
+@import "all-sass-imports";
+
+aside {
+  width: 100px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+
+  .brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .icon-links {
+    width: 100%;
+
+    ul {
+      @include display-flex(column, flex-start, center);
+      row-gap: 20px;
+      .icon {
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        border-radius: 10px;
+        &:hover {
+          background-color: lighten($color: $primary-color, $amount: 65);
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.active-link {
+  background-color: lighten($color: $primary-color, $amount: 65);
+}

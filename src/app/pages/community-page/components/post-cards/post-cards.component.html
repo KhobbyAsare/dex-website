@@ -1,0 +1,132 @@
+<div class="post-card">
+  <div class="headline">
+    <div class="profileIcon">
+      <img
+        src="https://images.unsplash.com/photo-1520722359162-8ead33ae9ba4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="profileIcon"
+      />
+    </div>
+    <div class="profileName">
+      <h6>John Doe</h6>
+      <p>Post on Data Science</p>
+    </div>
+    <div class="date-time">
+        <p>Jun 31, 2024, 5:50PM</p>
+    </div>
+  </div>
+  <div class="text-image-post">
+    <p>
+      Data science is an interdisciplinary field that uses scientific methods,
+      processes, algorithms, and systems to extract knowledge and insights from
+      structured and unstructured data. It involves a blend of data inference,
+      algorithm development, and technology to solve analytically complex
+      problems. At the core of data science is the use of advanced analytics
+      techniques and scientific principles to scrutinize information, derive
+      meaningful conclusions, and make informed decisions. With the ever-growing
+      volume of data, data science has become an essential element for
+      organizations to gain a competitive edge in today's data-driven world.
+    </p>
+    <div class="image-wrapper">
+      <!-- Loop through first 4 images -->
+      <div
+        *ngFor="let image of numberOfImages.slice(0, 4)"
+        class="image"
+        [style.background-image]="'url(' + image + ')'"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1611647832580-377268dba7cb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="postImage"
+        />
+      </div>
+    </div>
+
+    <!-- Loop through remaining images -->
+    @if (numberOfImages.length - 4 > 1) {
+    <div class="image-count">
+      <span>{{ numberOfImages.length - 4 }} more</span>
+    </div>
+    }
+
+    <div class="buttons">
+      <div class="left-btns">
+        <div class="svg-holder">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15px"
+            height="15px"
+            viewBox="0 0 24 24"
+            class="endorse-svg"
+          >
+            <path
+              fill="none"
+              stroke="#666666"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="m6 11l6-6l6 6M6 19l6-6l6 6"
+            />
+          </svg>
+          <span>239</span>
+        </div>
+        <div class="svg-holder">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15px"
+            height="15px"
+            viewBox="0 0 24 24"
+            class="comment-svg"
+          >
+            <path
+              fill="#666666"
+              d="M5.5 11a1 1 0 0 0 2 0V5.41l1.29 1.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42l-3-3a1 1 0 0 0-.33-.21a1 1 0 0 0-.76 0a1 1 0 0 0-.33.21l-3 3a1 1 0 0 0 1.42 1.42l1.29-1.3Zm13-5h-5a1 1 0 0 0 0 2h5a1 1 0 0 1 1 1v9.72l-1.57-1.45a1 1 0 0 0-.68-.27H8.5a1 1 0 0 1-1-1v-1a1 1 0 0 0-2 0v1a3 3 0 0 0 3 3h8.36l3 2.73a1 1 0 0 0 .68.27a1.1 1.1 0 0 0 .4-.08a1 1 0 0 0 .6-.92V9a3 3 0 0 0-3.04-3"
+            />
+          </svg>
+          comment
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="svg-holder">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15px"
+            height="15px"
+            viewBox="0 0 24 24"
+            class="bookmark-svg"
+          >
+            <g
+              fill="none"
+              stroke="#666666"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            >
+              <path
+                d="M7.527 20.841C6.861 21.274 6 20.772 6 19.952V3.942c0-.52.336-.942.75-.942h10.5c.414 0 .75.422.75.942v16.01c0 .82-.861 1.322-1.527.89l-3.946-2.562a.962.962 0 0 0-1.054 0z"
+              />
+              <path
+                d="m9.7 9.822l1.379 1.576a.299.299 0 0 0 .466-.022l2.8-3.876"
+              />
+            </g>
+          </svg>
+          bookmark
+        </div>
+        <div class="svg-holder">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15px"
+            height="15px"
+            viewBox="0 0 24 24"
+            class="comment-svg"
+          >
+            <path
+              fill="#666666"
+              d="M13 9.8v.9l-1.7.2c-2.6.4-4.5 1.4-5.9 2.7c1.7-.5 3.5-.8 5.6-.8h2v1.3l2.2-2.1zM11 5l7 7l-7 7v-4.1c-5 0-8.5 1.6-11 5.1c1-5 4-10 11-11m6-1V5l7 7l-7 7v-3l4-4"
+            />
+          </svg>
+          share
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
