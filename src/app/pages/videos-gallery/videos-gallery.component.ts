@@ -8,6 +8,8 @@ import { CardsScrollComponent } from './components/cards-scroll/cards-scroll.com
 import { CommonModule } from '@angular/common';
 import { VideoCardComponent } from './components/video-card/video-card.component';
 import { videoList } from './card-videos';
+import { VideoPreviewModalComponent } from './components/video-preview-modal/video-preview-modal.component';
+import { VideoInterface } from './components/video-card/video-interface';
 
 @Component({
   selector: 'app-videos-gallery',
@@ -21,6 +23,7 @@ import { videoList } from './card-videos';
     AutoScrollComponent,
     CardsScrollComponent,
     VideoCardComponent,
+    VideoPreviewModalComponent,
   ],
 })
 export class VideosGalleryComponent implements OnInit {
@@ -30,15 +33,7 @@ export class VideosGalleryComponent implements OnInit {
   isPreview = false;
   previewingVideo = '';
 
-  cardVideo: {
-    description: string;
-    thumbnail: string;
-    src: string;
-    title: string;
-    views: number;
-    uploaderIcon: string;
-    uploaderName: string;
-  }[] = [];
+  cardVideo: VideoInterface[] = [];
 
   ngOnInit() {
     this.cardVideo = videoList;
@@ -50,7 +45,6 @@ export class VideosGalleryComponent implements OnInit {
 
   getPreviewVideo(src: string) {
     this.previewingVideo = src;
-    console.log(this.previewingVideo);
   }
 
   getPreviewStatus(status: boolean) {

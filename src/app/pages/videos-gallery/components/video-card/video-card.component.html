@@ -25,6 +25,14 @@
   </div>
   <div class="video-headline">
     <h3>{{ video()?.title | titlecase }}</h3>
+    <div class="tags">
+      <span>#javascript</span>
+      <span>#ai</span>
+      <span>#gaming</span>
+    </div>
+    <div class="date">
+      <span>Jan 09,2024</span>
+    </div>
   </div>
   <div class="video-thumbnail" (click)="getPreviewVideo(video()?.src)">
     <img [src]="video()?.thumbnail" alt="thumbnail" />

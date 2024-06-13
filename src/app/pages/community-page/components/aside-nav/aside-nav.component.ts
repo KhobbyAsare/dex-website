@@ -13,10 +13,12 @@ export class AsideNavComponent {
   public brandName = inject(BrandNameSignalService).brand_name();
 
   toggleSearch = output<boolean>();
-openSearchBar = false;
+  openSearchBar = false;
+  smallerScreenSideNav:boolean = false;
 
   toggleSearchBar() {
     this.openSearchBar = !this.openSearchBar;
     this.toggleSearch.emit(this.openSearchBar);
+    this.smallerScreenSideNav = false;
   }
 }

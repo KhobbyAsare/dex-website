@@ -10,6 +10,14 @@
   min-width: 500px;
   cursor: pointer;
 
+  @include screen-breakpoints(tablet-portrait) {
+    min-width: 300px;
+  }
+
+  @include screen-breakpoints(phone) {
+    width: 100%;
+  }
+
   .headline {
     @include display-flex(row, space-between, flex-start);
     padding-bottom: 0.5rem;
@@ -33,6 +41,7 @@
       flex: 1;
       color: #666666;
       height: 100%;
+
       h6 {
         font-size: 0.8rem;
       }
@@ -44,6 +53,9 @@
     .date-time {
       color: #666666;
       font-size: 0.8rem;
+      @include screen-breakpoints(phone) {
+        width: 30%;
+      }
     }
   }
 
@@ -54,6 +66,10 @@
     p {
       font-size: 0.9rem;
       color: #252525;
+
+      @include screen-breakpoints(phone) {
+        font-size: 0.8rem;
+      }
     }
 
     .image-wrapper {
@@ -63,9 +79,19 @@
       overflow: hidden;
       margin-top: 0.5rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Modified line
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+      ); // Modified line
       grid-template-rows: repeat(1, 1fr);
       gap: 0.5rem;
+
+      @include screen-breakpoints(phone) {
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(100px, 1fr)
+        ); // Modified line
+      }
 
       img {
         width: 100%;
@@ -74,20 +100,21 @@
       }
     }
 
-    .image-count{
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        font-size: 0.8rem;
-        color: $primary-color;
-        span{
-            margin-left: 0.5rem;
-        }
+    .image-count {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.8rem;
+      color: $primary-color;
+      span {
+        margin-left: 0.5rem;
+      }
     }
   }
 
   .buttons {
     @include display-flex(row, space-between, center);
+
     .svg-holder {
       padding: 0.5rem;
       @include display-flex(row, center, center);
@@ -95,11 +122,18 @@
       color: #666666;
       font-size: 0.8rem;
       column-gap: 0.3rem;
-
       cursor: pointer;
+
+      @include screen-breakpoints(phone) {
+        column-gap: 0px;
+      }
       span {
         font-size: 0.8rem;
         margin-left: 0.5rem;
+
+        @include screen-breakpoints(phone) {
+          margin: 0;
+        }
       }
     }
 

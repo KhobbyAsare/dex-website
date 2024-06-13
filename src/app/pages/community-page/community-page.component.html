@@ -6,45 +6,42 @@
     <div class="posts-content">
       <div class="container">
         <div class="search-holder" [style.top]="openSearchBar ? '0%' : '-100%'">
+          <div class="search-wrapper">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search for posts"
+            />
             <div
-          class="search-wrapper"
-          
-        >
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search for posts"
-          />
-          <div
-            class="search-icon"
-            [style.display]="openSearchBar ? 'block' : 'none'"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20px"
-              height="20px"
-              viewBox="0 0 24 24"
+              class="search-icon"
+              [style.display]="openSearchBar ? 'block' : 'none'"
             >
-              <path
-                fill="none"
-                stroke="#666666"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M21 21l-4.35-4.35"
-              />
-              <circle
-                fill="none"
-                stroke="#666666"
-                stroke-width="1.5"
-                cx="10"
-                cy="10"
-                r="8"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="#666666"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M21 21l-4.35-4.35"
+                />
+                <circle
+                  fill="none"
+                  stroke="#666666"
+                  stroke-width="1.5"
+                  cx="10"
+                  cy="10"
+                  r="8"
+                />
+              </svg>
+            </div>
           </div>
-        </div>
         </div>
         <header>
           <textarea
@@ -84,19 +81,64 @@
         }
       </div>
 
-      <div class="frequent-posts">
-        <h3>Top Posts</h3>
+      <div class="frequent-post-users">
+        <div class="frequent-posts">
+          <h3>Top Posts</h3>
 
-        <ul>
-          <li>Data Science</li>
-          <li>Machine Learning</li>
-          <li>Artificial Intelligence</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Angular</li>
-        </ul>
+          <ul>
+            <li>Data Science</li>
+            <li>Machine Learning</li>
+            <li>Artificial Intelligence</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Angular</li>
+          </ul>
+        </div>
+
+        <div class="Users">
+          <h3>Recommended Users To Follow</h3>
+
+          <div class="users-wrapper">
+            <div class="user">
+              <div class="logo">
+                <img
+                  src="https://images.unsplash.com/photo-1517732306149-e8f829eb588a?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="userImage"
+                />
+              </div>
+              <div class="user-details">
+                <h4>Lokki Jones</h4>
+                <p>Project Manager</p>
+              </div>
+            </div>
+            <div class="user">
+              <div class="logo">
+                <img
+                  src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="userImage"
+                />
+              </div>
+              <div class="user-details">
+                <h4>Mike Banks</h4>
+                <p>Game Developer</p>
+              </div>
+            </div>
+            <div class="user">
+              <div class="logo">
+                <img
+                  src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="userImage"
+                />
+              </div>
+              <div class="user-details">
+                <h4>Jane Links </h4>
+                <p>Cloud Practitioner</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

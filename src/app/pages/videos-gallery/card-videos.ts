@@ -1,12 +1,6 @@
-export const videoList: {
-  description: string;
-  thumbnail: string;
-  src: string;
-  title: string;
-  views: number;
-  uploaderIcon: string;
-  uploaderName: string;
-}[] = [
+import { VideoInterface } from "./components/video-card/video-interface";
+
+export const videoList: VideoInterface[] = [
   {
     thumbnail:
       'https://images.unsplash.com/photo-1480506132288-68f7705954bd?q=80&w=1840&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',

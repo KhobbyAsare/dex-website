@@ -1,6 +1,36 @@
 @import "all-sass-imports";
 
-aside {
+.small-screen-menu {
+  display: none;
+  @include screen-breakpoints(phone) {
+    .brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+}
+
+.tablet-larger-screen-aside {
   width: 100px;
   height: 100%;
   background-color: #fff;
@@ -9,6 +39,68 @@ aside {
   display: flex;
   flex-direction: column;
   row-gap: 50px;
+
+  @include screen-breakpoints(phone) {
+    display: none;
+  }
+
+  @include screen-breakpoints(phone) {
+    display: none;
+  }
+
+  .brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .icon-links {
+    width: 100%;
+
+    ul {
+      @include display-flex(column, flex-start, center);
+      row-gap: 20px;
+      .icon {
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        border-radius: 10px;
+        &:hover {
+          background-color: lighten($color: $primary-color, $amount: 65);
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.smaller-screen-aside {
+  width: 100px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  flex-direction: column;
+  row-gap: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: left ease-in-out 600ms;
+
+  @include screen-breakpoints(tablet-portrait) {
+    display: none;
+  }
+  @include screen-breakpoints(desktop) {
+    display: none;
+  }
+
+  @include screen-breakpoints(large-desktop) {
+    display: none;
+  }
+
+  @include screen-breakpoints(phone) {
+    display: flex;
+  }
 
   .brand {
     font-size: 2rem;

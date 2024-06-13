@@ -89,15 +89,42 @@
   }
 
   .video-headline {
-    height: 70px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    height: 100px;
+
     width: 100%;
     h3 {
       font-size: 1.4rem;
       margin: 0;
+      height: fit-content;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: #000;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      span {
+        background-color: #f1f1f1;
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+        margin-right: 0.5rem;
+        font-size: 0.7rem;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+      }
+    }
+
+    .date{
+      span{
+        font-size: 0.7rem;
+        color: #333333;
+      
+      }
     }
   }
 

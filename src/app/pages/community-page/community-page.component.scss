@@ -17,6 +17,14 @@ section {
     align-items: flex-start;
     padding: 20px;
 
+    @include screen-breakpoints(desktop) {
+      padding: 20px 10px;
+    }
+
+    @include screen-breakpoints(phone) {
+      padding: 20px 0;
+    }
+
     .posts-content {
       flex: 1;
       height: 100%;
@@ -31,6 +39,15 @@ section {
         row-gap: 20px;
         overflow: scroll;
         position: relative;
+
+        @include screen-breakpoints(phone) {
+          width: 90%;
+        }
+
+        @include screen-breakpoints(phone) {
+          padding-top: 60px;
+          width: 90%;
+        }
 
         &::-webkit-scrollbar {
           width: 0px;
@@ -58,7 +75,21 @@ section {
           width: 53.3%;
           margin: 0 auto;
           @include display-flex(row, center, center);
-            border-radius: 10px;
+          border-radius: 10px;
+
+          @include screen-breakpoints(desktop) {
+            width: 44.9%;
+          }
+
+          @include screen-breakpoints(tablet-portrait) {
+            width: 58%;
+            height: 10vh;
+          }
+
+          @include screen-breakpoints(phone) {
+            width: 90%;
+            height: 40vh;
+          }
 
           .search-wrapper {
             width: 100%;
@@ -154,30 +185,96 @@ section {
         }
       }
 
-      .frequent-posts {
-        height: fit-content;
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 200px;
+      .frequent-post-users {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
 
-        padding: 10px;
-        h3 {
-          font-size: 1.1rem;
-          border-bottom: 1px solid #e6e6e6;
+        @include screen-breakpoints(phone) {
+          display: none;
+        }
+        .frequent-posts {
+          height: fit-content;
+          background-color: #f5f5f5;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          width: 200px;
+          padding: 10px;
+
+          h3 {
+            font-size: 1.1rem;
+            border-bottom: 1px solid #e6e6e6;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+            li {
+              padding: 0.5rem 0;
+              background-color: #f5f5f5;
+              border-radius: 10px;
+              padding: 0.5rem;
+              cursor: pointer;
+              &:hover {
+                background-color: lighten($color: $primary-color, $amount: 65);
+              }
+            }
+          }
         }
 
-        ul {
-          list-style: none;
-          padding: 0;
-          li {
-            padding: 0.5rem 0;
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            padding: 0.5rem;
-            cursor: pointer;
-            &:hover {
-              background-color: lighten($color: $primary-color, $amount: 65);
+        .Users {
+          height: fit-content;
+          background-color: #f5f5f5;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          width: 200px;
+          padding: 10px;
+
+          h3 {
+            font-size: 1.1rem;
+            border-bottom: 1px solid #e6e6e6;
+          }
+
+          .users-wrapper {
+            flex-direction: column;
+            display: flex;
+            row-gap: 10px;
+            margin-top: 10px;
+            .user {
+              @include display-flex(row, space-between, center);
+              column-gap: 10px;
+              padding: 10px;
+              border-radius: 10px;
+              transition: all ease-in-out;
+              cursor: pointer;
+              &:hover {
+                background-color: #e6e6e6;
+              }
+              .logo {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #f5f5f5;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 50%;
+                  object-fit: cover;
+                }
+              }
+
+              .user-details {
+                flex: 1;
+                h4 {
+                  font-size: 0.9rem;
+                  color: #666666;
+                }
+                p {
+                  font-size: 0.8rem;
+                  color: #666666;
+                }
+              }
             }
           }
         }
@@ -191,6 +288,14 @@ section {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 300px;
       padding: 10px;
+      @include screen-breakpoints(desktop) {
+        height: 100%;
+        overflow: scroll;
+      }
+
+      @include screen-breakpoints(tablet-portrait) {
+        display: none;
+      }
 
       h3 {
         font-size: 1.1rem;
